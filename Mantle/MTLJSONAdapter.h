@@ -140,6 +140,9 @@ extern const NSInteger MTLJSONAdapterErrorInvalidJSONMapping;
 // occurred.
 - (id)initWithJSONDictionary:(NSDictionary *)JSONDictionary modelClass:(Class)modelClass error:(NSError **)error;
 
+// Same as above but pass in your own keypath dictionary
+- (id)initWithJSONDictionary:(NSDictionary *)JSONDictionary modelClass:(Class)modelClass keyPathDictionary:(NSDictionary *)keyPaths error:(NSError **)error;
+
 // Initializes the receiver with an existing model.
 //
 // model - The model to use for JSON serialization. This argument must not be
